@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 
-app.get('/intern', (req, res) => {
+app.get('/api', (req, res) => {
   return res.json({
     slack_name: req.query.slack_name,
     'current_day': 'Thursday',
