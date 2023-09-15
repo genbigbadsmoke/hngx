@@ -49,22 +49,6 @@ app.post('/api/user', async (req, res) => {
     // console.log(req.body)
     // res.send(req.body)
     try {
-        let {name, email, id} = req.params
-
-        // If name is not provided in params, check the JSON body
-        if (!name && !email && !id) {
-            name = req.body.name;
-            email = req.body.email;
-            id = req.body.id
-        }
-
-        //if user exists
-        const existingUser = await User.findOne({name, id, email});
-        
-        if (existingUser) {
-            return res.status(400).json({error: error.message})
-        }
-
         const user = await User.create(req.body)
         res.status(200).json(user)
     } catch (error) {
