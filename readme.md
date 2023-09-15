@@ -5,13 +5,20 @@ This is a simple CRUD API that provides basic functionality for creating, readin
 Features
 
 Supports all four CRUD operations:
+
 Create
+
 Read
+
 Update
+
 Delete
+
+
 Uses JSON for data serialization and deserialization
 Supports cross-origin resource sharing (CORS)
 
+Data is fed via postman using body json not query parameters
 
 How to use
 
