@@ -19,7 +19,7 @@ mongoose.connect(mongourl).then(() => {
     })
 }).catch(error => console.log(error))
 
-app.get('/user', async (req, res) => {
+app.get('/api/user', async (req, res) => {
     try {
         const users = await User.find({})
         res.status(200).json(users)
@@ -29,7 +29,7 @@ app.get('/user', async (req, res) => {
     }
 })
 
-app.get('/user/:id', async (req, res) => {
+app.get('/api/user/:id', async (req, res) => {
     try {
         const {id} = req.params;       
         const user = await User.findById(id)
@@ -45,7 +45,7 @@ app.get('/user/:id', async (req, res) => {
     }
 })
 
-app.post('/user', async (req, res) => {
+app.post('/api/user', async (req, res) => {
     // console.log(req.body)
     // res.send(req.body)
     try {
@@ -74,7 +74,7 @@ app.post('/user', async (req, res) => {
 })
 
 //update user
-app.put('/user/:id', async (req, res) => {
+app.put('/api/user/:id', async (req, res) => {
     try {
         const {id} = req.params
         const user = await User.findByIdAndUpdate(id, req.body)
@@ -91,7 +91,7 @@ app.put('/user/:id', async (req, res) => {
     }
 })
 
-app.delete('/user/:id', async (req, res) => {
+app.delete('/api/user/:id', async (req, res) => {
     try {
         const {id} = req.params;
         const user = await User.findByIdAndDelete(id)
