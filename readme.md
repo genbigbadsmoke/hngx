@@ -1,6 +1,6 @@
 Simple CRUD API
 
-This is a simple CRUD API that provides basic functionality for creating, reading, updating, and deleting data. It is built using Node.js: https://nodejs.org/en and Express: https://expressjs.com/, and uses an in-memory database for storing data.
+This is a simple CRUD API that provides basic functionality for creating, reading, updating, and deleting data. It is built using Node.js: https://nodejs.org/en and Express: https://expressjs.com/, and uses mongoDB as database for storing data.
 
 Features
 
